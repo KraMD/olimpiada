@@ -1,0 +1,31 @@
+using namespace std;
+#include <iostream>
+#include <math.h>
+main ()
+{
+	float a,b,c,n,s,g,j1,j2,j3,x,k;
+	int z,h;
+	cout<<"\n vvedite chislo dnei";
+	cin>>n;
+	a=10;
+	b=50;
+	c=150;
+	if (n<=7)  goto j1;
+	if (n<28) goto j2;
+	if (n>=28) goto j3;
+j1: s=n*a;
+goto t; //код для 1 случая
+j2: z=n/7;
+	k=n-z*7;
+	s=k*a+z*b;
+goto t; //код для 2 случая 
+j3: z=n/28;
+    k=n-z*28;
+    h=k/7;
+    x=k-h*7;
+    s=z*c+h*b+a*x;
+    goto t;//код для 3 случая 
+	t: cout<<"\n cyyma oplati "<<s<<" za "<<n<<" dnei";
+	system("pause");
+	return 0;	
+	}
